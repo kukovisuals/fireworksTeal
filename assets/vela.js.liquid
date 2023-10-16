@@ -3167,7 +3167,7 @@ vela.productPage = function (options) {
           jQuery('#ship_notice').attr('data-status', 'inactive');
         }
     });
-  
+    
 	// ajax swatch click
     jQuery('body').off('click', '.swatch-element label').on('click', '.swatch-element label', function (ev) {
         ev.stopPropagation();
@@ -3339,7 +3339,11 @@ vela.productPage = function (options) {
               },200)
             }
         }
-
+        if (window.pdpRelProducts[colorNeeded].handle === "teal-only-bra" ) {
+            // 101323
+            loadScript('//asset.fwcdn3.com/js/integrations/shopify.js');
+            loadScript('//asset.fwcdn3.com/js/fwn.js');
+        }
     });
 
     // subscription add to cart toggler
@@ -3905,4 +3909,10 @@ function selectSizeCheck(){
 
       return finalUrl;
     }
+}
+function loadScript(src) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = src;
+    document.body.appendChild(script);
 }

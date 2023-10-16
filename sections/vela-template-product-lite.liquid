@@ -1,5 +1,4 @@
 <style>
-
 .isBundleBras .nrml-price23,
 .isMblBundleBras .nrml-price23 {
   color: var(--red-color-discounts);
@@ -1194,6 +1193,12 @@ li.active .accordion_arrow {
   {%- assign fullDescription = product.description -%}
 {%- endif -%}
 <input type="hidden" id="prod-style-key" value="{{ prodNameTitle }}::{{ prodColorTitle }}" />
+<fw-storyblock
+  channel="joineby"
+  playlist="glqzQv"
+  mode="pinned"
+  autoplay="true"                       
+></fw-storyblock> 
 <div class="container-full">
   <div class="pageCollectionInner{% if isLiquidation %} pdp-liq{% endif %}">
     <div class="productBox pdp{% if isOnHolidaySale %} holidaySaleItem{% endif %}" itemscope itemtype="http://schema.org/Product">
@@ -1206,13 +1211,12 @@ li.active .accordion_arrow {
       
       <meta itemprop="sku" content="{{ product.selected_or_first_available_variant.sku }}">
       <meta itemprop="gtin8" content="{{ product.selected_or_first_available_variant.sku }}">
-      
+        
     
         <div class="proBoxPrimary mb30 {{ section.settings.prodetail_style }}  eby-container-pdp-2022">
           <div class="row">
               
             {% include 'pdp-title-2022', isOnHolidaySale: isOnHolidaySale %}
-              
             <!-- start of gallery  -->
             <div class="ab proBoxImage col-xs-12 col-md-12 col-lg-12 mb30{% if product.type contains "Surprise Panty Pack" %} spImgWrapper{% endif %}">
               {% include 'vela-prodetail-image-lite' %}
@@ -1227,10 +1231,9 @@ li.active .accordion_arrow {
                   {% include 'vela-prodetail-info-lite' %}
                 {% endif %}
               </div>
-
             </div>
           </div>
-        </div>
+        </div>   
                 <div class="product-details-tab">
                     <div class="details-content-background">
                         <div class="details-content">
